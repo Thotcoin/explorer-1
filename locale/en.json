@@ -151,4 +151,9 @@
     "heavy_changein": "Reward change in approximately",
     "heavy_key": "Key",
     "heavy_lastxvotes": "Last 20 votes",
+  
+    // Masternode view
+    "mn_status": "Status",
+    "mn_lastseen": "Last Seen",
+    "mn_lastpaid": "Last Paid",
 }
