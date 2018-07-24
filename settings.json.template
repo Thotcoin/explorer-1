@@ -25,6 +25,9 @@
   // You can ignore this setting if you're not using a ripple based coin.
   "rippleEpoch": 946684800,
 
+  // ipstack API key
+  "ipstackapi_key": "get_your_own_key",
+
   // logo
   "logo": "/images/logo.png",
 
