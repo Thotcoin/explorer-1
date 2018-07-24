@@ -27,8 +27,11 @@ mongoose.connect(dbString, function(err) {
       lib.syncLoop(body.length, function (loop) {
         var i = loop.iteration();
         var addressarr = body[i].addr.split(':');
-        var address = addressarr.slice(0,addressarr.length-2).join(':');
-        // var address = body[i].addr.split(':')[0]; //changed to support ipv6 addresses
+        var address = addressarr.slice(0,addressarr.length-1).join(':');
+	      address = address.replace("[","");
+	      address = address.replace("]","");
+	      //console.log('output addr = ' + body[i].addr + ' | parsed address = ' + address);
+	      //var address = body[i].addr.split(':')[0];
         db.find_peer(address, function(peer) {
           if (peer) {
             // peer already exists
