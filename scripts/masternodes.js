@@ -25,7 +25,11 @@ mongoose.connect(dbString, function(err) {
     request({uri: 'http://127.0.0.1:' + settings.port + '/api/getmasternodes', json: true}, function (error, response, body) {
       lib.syncLoop(body.length, function (loop) {
         var i = loop.iteration();
-        var address = body[i].addr.split(':')[0];
+        var addressarr = body[i].addr.split(':');
+        var address = addressarr.slice(0,addressarr.length-1).join(':');
+	      address = address.replace("[","");
+	      address = address.replace("]","");
+        //var address = body[i].addr.split(':')[0];
         db.find_peer(address, function(peer) {
           if (peer) {
             // peer already exists
