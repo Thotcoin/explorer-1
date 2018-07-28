@@ -41,7 +41,8 @@ Installation steps:
  
 ### 12. Exit npm screen session
  press Ctrl+a+d
-
+ 
  To reconnect to npm screen session use command below:
+
     screen -r -d npm
      
