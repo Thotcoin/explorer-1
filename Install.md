@@ -26,7 +26,7 @@ Installation steps:
 ### 8. Install Nodejs dependencies
     sudo chmod -R 777 ~/explorer
     cd ~/explorer
-    sudo mpn install mongoose
+    sudo npm install mongoose
     sudo npm install
  
 ### 9. Create and modify settings.json
