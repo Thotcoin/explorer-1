@@ -16,7 +16,7 @@ Installation steps:
     sudo apt-get install -y nodejs
  
 ### 6. Create database and user
-    mong
+    mongo
     > use explorerdb
     > db.createUser( { user: "username", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
  
