@@ -20,7 +20,7 @@ block content
               .panel-body.text-center
                 .row.info-row
                   .col-md-4
-                    img(src='#{settings.logo}', style='')
+                    img(src='#{settings.logo}', style='margin:5px;height:128px;')
                   .col-md-4
                     h2 #{settings.coin} &nbsp(#{settings.symbol})
                     span #{lastPriceBtc} BTC
@@ -36,8 +36,16 @@ block content
                     h4 #{supply} #{settings.symbol}
                     h5.sub Current Coin supply
                   .col-md-4
-                    h4 #{coinsLocked}
-                    h5.sub Coins locked (#{coinsLockedPerc}%)
+                    .panel.panel-default.panel-summary
+                      .panel-heading
+                        strong Coins Locked
+                      .panel-body(style="padding-top: 25px")
+                        row.text-center  
+                          .col-md-12
+                            h1 #{coinsLocked}
+                            h3 Supply percent:&nbsp; #{coinsLockedPerc}%
+                            // h4 #{coinsLocked}
+                            // h5.sub Coins locked (#{coinsLockedPerc}%)
                 .row.info-row
                   .col-md-4
                     h4 #{activeMasternodes} / #{totalMasternodes}
