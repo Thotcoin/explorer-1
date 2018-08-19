@@ -1,6 +1,6 @@
 extends layout
 
-block content   
+block content
   .col-md-12(style="margin-bottom: 4%")
     .panel.panel-default.coin-info
       .panel-heading
@@ -51,38 +51,25 @@ block content
                       if nodeWorthUsd
                         span  / $#{nodeWorthUsd}
                     h5.sub Node worth
-                .row
-                  <hr>
-                .row.text-left
-                  .col-md-12
-                    h4 Estimated earnings (Coin/BTC/USD)
-                .row.earnings
-                  .col-xs-2.col-md-offset-3.text-right
-                    div Daily
-                  .col-xs-10.col-md-7.text-left
-                    div #{dailyCoin} #{settings.symbol} / #{dailyBtc} BTC / $#{dailyUsd}
-                .row.earnings
-                  .col-xs-2.col-md-offset-3.text-right
-                    div Weekly
-                  .col-xs-10.col-md-7.text-left
-                    div #{weeklyCoin} #{settings.symbol} / #{weeklyBtc} BTC / $#{weeklyUsd}
-                .row.earnings
-                  .col-xs-2.col-md-offset-3.text-right
-                    div Monthly
-                  .col-xs-10.col-md-7.text-left
-                    div #{monthlyCoin} #{settings.symbol} / #{monthlyBtc} BTC / $#{monthlyUsd}
-                .row.earnings
-                  .col-xs-2.col-md-offset-3.text-right
-                    div Yearly
-                  .col-xs-10.col-md-7.text-left
-                    div #{yearlyCoin} #{settings.symbol} / #{yearlyBtc} BTC / $#{yearlyUsd}
+                .row.info-row
+                  .col-md-4
+                    h2 Estimated earnings
+                .row.info-row
+                  .col-md-4
+                    h4 #{dailyCoin} #{settings.symbol} / #{dailyBtc} BTC / $#{dailyUsd}
+                    h5.sub Daily
+                  .col-md-4
+                    h4 #{weeklyCoin} #{settings.symbol} / #{weeklyBtc} BTC / $#{weeklyUsd}
+                    h5.sub Weekly
+                .row.info-row
+                  .col-md-4
+                    h4 #{monthlyCoin} #{settings.symbol} / #{monthlyBtc} BTC / $#{monthlyUsd}
+                    h5.sub Monthly
+                  .col-md-4
+                    h4 #{yearlyCoin} #{settings.symbol} / #{yearlyBtc} BTC / $#{yearlyUsd}
+                    h5.sub Yearly
                 if (calculatedBasedOnRealData)
                   .row &nbsp;
                   .row.earnings
                     .col-md-offset-5.text-left
                       em Calculations are based on real masternode payment data over the last 24h.
-
-
-
-
-
