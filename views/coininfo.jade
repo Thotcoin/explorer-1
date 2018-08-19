@@ -1,11 +1,11 @@
 extends layout
 
-block content
+block content   
   .col-md-12(style="margin-bottom: 4%")
     .panel.panel-default.coin-info
       .panel-heading
         strong #{settings.locale.coininfo_head}
-      .panel-body
+      .panel-body(style='background-color: #111111')
         .row
           .col-md-3
             .panel.panel-default
@@ -17,12 +17,12 @@ block content
                   <br>
           .col-md-9
             .panel.panel-default
-              .panel-body.text-center
-                .row.info-row
+              .panel-body(style='background-color: #111111; text-align: center;')
+                .row
                   .col-md-4
                     img(src='#{settings.logo}', style='margin:5px;height:128px;')
                   .col-md-4
-                    h2 #{settings.coin} &nbsp(#{settings.symbol})
+                    h3 #{settings.coin} &nbsp(#{settings.symbol})
                     span #{lastPriceBtc} BTC
                     if lastPriceUsd
                       span  / $#{lastPriceUsd} &nbsp;
@@ -40,12 +40,10 @@ block content
                       .panel-heading
                         strong Coins Locked
                       .panel-body(style="padding-top: 25px")
-                        row.text-center  
+                        row.text-center
                           .col-md-12
                             h1 #{coinsLocked}
                             h3 Supply percent:&nbsp; #{coinsLockedPerc}%
-                            // h4 #{coinsLocked}
-                            // h5.sub Coins locked (#{coinsLockedPerc}%)
                 .row.info-row
                   .col-md-4
                     h4 #{activeMasternodes} / #{totalMasternodes}
@@ -60,8 +58,8 @@ block content
                         span  / $#{nodeWorthUsd}
                     h5.sub Node worth
                 .row.info-row
-                  .col-md-4
-                    h2 Estimated earnings
+                  .col-md-12(style='text-align: center;')
+                    h3 Estimated earnings
                 .row.info-row
                   .col-md-4
                     h4 #{dailyCoin} #{settings.symbol} / #{dailyBtc} BTC / $#{dailyUsd}
