@@ -5,7 +5,7 @@ block content
   - var received = address.received / 100000000
     img.qrcode.pull-right.hidden-xs(src='/qr/#{address.a_id}')
   .col-xs-12.col-md-10.col-md-offset-1
-    .panel.panel-default.panel-address-summary
+    .panel.panel-default.panel-success
       .panel-heading(style='position:relative;')        
         strong.mono #{address.a_id}
         if settings.labels[address.a_id]
