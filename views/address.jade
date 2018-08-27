@@ -21,22 +21,22 @@ block content
               if settings.labels[address.a_id].url
                 a(href='#{settings.labels[address.a_id].url}', target='_blank')
                   span.fa.fa-question-circle(style='margin-left:5px;')
-      table.table.table-bordered.table-striped.summary-table 
+      table.table.table-bordered.table-striped.summary-table
         thead
           tr
             if settings.show_sent_received == true
-              th #{settings.locale.total_sent} (#{settings.symbol})
+              th #{settings.locale.total_received} (#{settings.symbol})
             if address.a_id !== 'coinbase'
               if settings.show_sent_received == true
-                th #{settings.locale.total_received} (#{settings.symbol})
+                th #{settings.locale.total_sent} (#{settings.symbol})
               th #{settings.locale.rl_balance} (#{settings.symbol})
-        tbody             
+        tbody
           tr
-            if settings.show_sent_received == true 
-              td #{sent.toFixed(8)}
+            if settings.show_sent_received == true
+              td #{received.toFixed(8)}
             if address.a_id !== 'coinbase'
               if settings.show_sent_received == true
-                td #{received.toFixed(8)}
+                td #{sent.toFixed(8)}
               td #{balance}
     .panel.panel-default.hidden-xs
       .panel-heading
