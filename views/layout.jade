@@ -173,7 +173,7 @@ html
     .col-md-12
       .row
         if settings.display.coinmarketcap
-          - pSize = "col-md-"+slotScore*4+" col-md-"+slotScore*4+" col-sm-"+slotScore*4
+          - pSize = "col-md-"+slotScore*4+" col-md-"+slotScore*4
           div(class=pSize)
             .panel.panel-default.panel-summary
               .panel-heading
@@ -205,7 +205,7 @@ html
                       =" USD"
 
         if settings.index.show_coin_supply
-          - pSize = "col-md-"+slotScore*2+" col-md-"+slotScore*2+" col-sm-"+slotScore*2
+          - pSize = "col-md-"+slotScore*2+" col-md-"+slotScore*2+" col-sm-4"
           div(class=pSize)
             .panel.panel-default.panel-summary
               .panel-heading
@@ -215,7 +215,7 @@ html
                   .col-md-12
                     h1#supply -
         if settings.index.show_hashrate
-          - pSize = "col-md-"+slotScore*4+" col-md-"+slotScore*4+" col-sm-"+slotScore*4
+          - pSize = "col-md-"+slotScore*4+" col-md-"+slotScore*4+" col-sm-4"
           div(class=pSize)
             .panel.panel-default.panel-summary
               .panel-heading
@@ -251,7 +251,7 @@ html
                       else
                         label#difficulty -
         if settings.display.masternodes == true
-          - pSize = "col-md-"+slotScore*2+" col-md-"+slotScore*2+" col-sm-"+slotScore*2
+          - pSize = "col-md-"+slotScore*2+" col-md-"+slotScore*2+" col-sm-4"
           div(class=pSize)
             .panel.panel-default.panel-summary
               .panel-heading
