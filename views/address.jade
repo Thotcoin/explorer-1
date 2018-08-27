@@ -33,11 +33,13 @@ block content
         tbody
           tr
             if settings.show_sent_received == true
-              td #{received.toFixed(8)}
+              td + #{received.toFixed(8)}
             if address.a_id !== 'coinbase'
               if settings.show_sent_received == true
-                td #{sent.toFixed(8)}
-              td #{balance}
+                td - #{sent.toFixed(8)}
+                td = #{balance}
+              if settings.show_sent_received == false
+                td #{balance}
     .panel.panel-default.hidden-xs
       .panel-heading
         strong #{settings.locale.ex_latest_transactions}
