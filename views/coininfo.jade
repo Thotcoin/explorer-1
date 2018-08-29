@@ -29,7 +29,7 @@ block content
                       - pricePercChangeClass = pricePercChange24h ? (pricePercChange24h.substr(0, 1) == '-' ? 'text-danger' : 'text-success') : 'text-default';
                       span(class=pricePercChangeClass) (#{pricePercChange24h}%)
                 .row.info-row
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Market Cap
@@ -38,7 +38,7 @@ block content
                           .col-md-12
                             h1 $#{marketCapUsd}
                             h3 CoinMarketCap Data
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Current Coin Supply
@@ -46,7 +46,7 @@ block content
                         row.text-center
                           .col-md-12
                             h1 #{supply} #{settings.symbol}
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Coins Locked
@@ -56,7 +56,7 @@ block content
                             h1 #{coinsLocked}
                             h3 Supply percent:&nbsp; #{coinsLockedPerc}%
                 .row.info-row
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Masternodes 
@@ -65,7 +65,7 @@ block content
                           .col-md-12
                             h1 #{totalMasternodes}            
                             h3 Total Masternode Count
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Collateral Amount
@@ -73,7 +73,7 @@ block content
                         row.text-center
                           .col-md-12
                             h1 #{mnRequiredCoins} #{settings.symbol}
-                  .col-md-4
+                  .col-md-4.col-sm-4
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Masternode Worth
@@ -88,7 +88,7 @@ block content
                   .col-md-12(style='text-align: center;')
                     h3 Estimated earnings
                 .row.info-row
-                  .col-md-6
+                  .col-md-6.col-sm-6
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Daily Reaward
@@ -96,7 +96,7 @@ block content
                         row.text-center
                           .col-md-12
                             h1 #{dailyCoin} #{settings.symbol} / #{dailyBtc} BTC / $#{dailyUsd}
-                  .col-md-6
+                  .col-md-6.col-sm-6
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Weekly Reward
@@ -105,7 +105,7 @@ block content
                           .col-md-12
                             h1 #{weeklyCoin} #{settings.symbol} / #{weeklyBtc} BTC / $#{weeklyUsd}
                 .row.info-row
-                  .col-md-6
+                  .col-md-6.col-sm-6
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Monthly Reward    
@@ -113,7 +113,7 @@ block content
                         row.text-center
                           .col-md-12
                             h1 #{monthlyCoin} #{settings.symbol} / #{monthlyBtc} BTC / $#{monthlyUsd}
-                  .col-md-6
+                  .col-md-6.col-sm-6
                     .panel.panel-default.panel-summary
                       .panel-heading
                         strong Yearly Reward
