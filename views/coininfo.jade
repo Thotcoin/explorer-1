@@ -2,7 +2,7 @@ extends layout
 
 block content   
   .col-md-12(style="margin-bottom: 4%")
-    .panel.panel-default.coin-info
+    .panel.panel-default(style="background-color:transparent")
       .panel-heading
         strong #{settings.locale.coininfo_head}
       .panel-body(style='background-color: #111111')
@@ -16,7 +16,7 @@ block content
                   a(href="#{item[1]}", target="_blank") #{item[0]}
                   <br>
           .col-md-9
-            .panel.panel-default
+            .panel.panel-default(style="background-color:transparent")
               .panel-body(style='background-color: #111111; text-align: center;')
                 .row
                   .col-md-4
